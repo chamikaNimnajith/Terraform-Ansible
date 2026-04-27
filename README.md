@@ -1,4 +1,4 @@
-# 🌍 Terraform × Ansible Starter Project
+#  Terraform + Ansible Automation
 
 This project — **terra-ansible-starter** — demonstrates how to use **Terraform** and **Ansible** together to provision and configure EC2 instances across multiple environments (**Dev**, **Stage**, and **Prod**).
 
