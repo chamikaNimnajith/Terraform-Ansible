@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Production</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .terminal {
+      background-color: #0f0f1a;
+      border: 1px solid #00ADB5;
+      border-radius: 10px;
+      padding: 40px 56px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+    .bar { display: flex; gap: 8px; margin-bottom: 28px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .r { background: #ff5f56; }
+    .y { background: #ffbd2e; }
+    .g { background: #27c93f; }
+    h1 { font-size: 22px; color: #00ADB5; margin-bottom: 8px; }
+    .prompt { font-size: 13px; color: #27c93f; margin-bottom: 24px; }
+    .uptime {
+      background: #00ADB518; border: 1px solid #00ADB544;
+      border-radius: 6px; padding: 14px 20px;
+      margin-bottom: 24px;
+      display: flex; justify-content: space-around;
+    }
+    .stat-label { font-size: 11px; color: #00ADB5; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4px; }
+    .stat-value { font-size: 15px; color: #e0e0e0; font-weight: bold; }
+    p { font-size: 14px; color: #9090a8; line-height: 1.9; margin-bottom: 6px; }
+    .badge {
+      display: inline-block; margin-top: 24px;
+      background: #00ADB518; color: #00ADB5;
+      border: 1px solid #00ADB544; border-radius: 4px;
+      font-size: 11px; padding: 3px 14px; letter-spacing: 0.08em;
+    }
+    .live-dot {
+      display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: #27c93f;
+      margin-right: 6px; vertical-align: middle;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="bar">
+      <div class="dot r"></div>
+      <div class="dot y"></div>
+      <div class="dot g"></div>
+    </div>
+    <h1>Production</h1>
+    <p class="prompt"><span class="live-dot"></span>System operational</p>
+    <div class="uptime">
+      <div>
+        <div class="stat-label">Uptime</div>
+        <div class="stat-value">99.9%</div>
+      </div>
+      <div>
+        <div class="stat-label">Status</div>
+        <div class="stat-value" style="color: #27c93f;">Live</div>
+      </div>
+      <div>
+        <div class="stat-label">Region</div>
+        <div class="stat-value">us-east-1</div>
+      </div>
+    </div>
+    <p>This is the real deal. No experiments here.</p>
+    <p>Every request counts. Every second matters.</p>
+    <p>Deployed, stable, and ready to serve.</p>
+    <div class="badge">ENV: PRODUCTION</div>
+  </div>
+</body>
+</html>

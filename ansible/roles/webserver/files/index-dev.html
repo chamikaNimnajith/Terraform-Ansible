@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Development</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .terminal {
+      background-color: #0f0f1a;
+      border: 1px solid #ff6600;
+      border-radius: 10px;
+      padding: 40px 56px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+    .bar { display: flex; gap: 8px; margin-bottom: 28px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .r { background: #ff5f56; }
+    .y { background: #ffbd2e; }
+    .g { background: #27c93f; }
+    h1 { font-size: 22px; color: #ff6600; margin-bottom: 8px; }
+    .prompt { font-size: 13px; color: #27c93f; margin-bottom: 24px; }
+    p { font-size: 14px; color: #9090a8; line-height: 1.9; margin-bottom: 6px; }
+    .badge {
+      display: inline-block; margin-top: 24px;
+      background: #ff660018; color: #ff6600;
+      border: 1px solid #ff660044; border-radius: 4px;
+      font-size: 11px; padding: 3px 14px; letter-spacing: 0.08em;
+    }
+    .cursor {
+      display: inline-block; width: 8px; height: 14px;
+      background: #ff6600; vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="bar">
+      <div class="dot r"></div>
+      <div class="dot y"></div>
+      <div class="dot g"></div>
+    </div>
+    <h1>Development</h1>
+    <p class="prompt">dev:~$ npm run dev <span class="cursor"></span></p>
+    <p>Where bugs are born and features take their first breath.</p>
+    <p>Nothing is final. Everything is a work in progress.</p>
+    <p>If it works, don't ask why.</p>
+    <div class="badge">ENV: DEVELOPMENT</div>
+  </div>
+</body>
+</html>

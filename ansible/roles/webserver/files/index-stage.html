@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Staging</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .terminal {
+      background-color: #0f0f1a;
+      border: 1px solid #5563DE;
+      border-radius: 10px;
+      padding: 40px 56px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+    .bar { display: flex; gap: 8px; margin-bottom: 28px; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .r { background: #ff5f56; }
+    .y { background: #ffbd2e; }
+    .g { background: #27c93f; }
+    h1 { font-size: 22px; color: #74ABE2; margin-bottom: 8px; }
+    .prompt { font-size: 13px; color: #5563DE; margin-bottom: 24px; }
+    .status-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px; margin-bottom: 24px;
+    }
+    .status-item {
+      background: #5563DE18; border: 1px solid #5563DE44;
+      border-radius: 6px; padding: 10px 6px;
+    }
+    .status-label { font-size: 11px; color: #74ABE2; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 5px; }
+    .status-value { font-size: 12px; color: #e0e0e0; }
+    .sdot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+    .pass { background: #27c93f; }
+    .pend { background: #ffbd2e; }
+    p { font-size: 14px; color: #9090a8; line-height: 1.9; margin-bottom: 6px; }
+    .badge {
+      display: inline-block; margin-top: 24px;
+      background: #5563DE18; color: #74ABE2;
+      border: 1px solid #5563DE44; border-radius: 4px;
+      font-size: 11px; padding: 3px 14px; letter-spacing: 0.08em;
+    }
+    .cursor {
+      display: inline-block; width: 8px; height: 14px;
+      background: #5563DE; vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="bar">
+      <div class="dot r"></div>
+      <div class="dot y"></div>
+      <div class="dot g"></div>
+    </div>
+    <h1>Staging</h1>
+    <p class="prompt">stage:~$ run-checks --all <span class="cursor"></span></p>
+    <div class="status-grid">
+      <div class="status-item">
+        <div class="status-label">Tests</div>
+        <div class="status-value"><span class="sdot pass"></span>Passing</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">Build</div>
+        <div class="status-value"><span class="sdot pass"></span>Success</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">Deploy</div>
+        <div class="status-value"><span class="sdot pend"></span>Pending</div>
+      </div>
+    </div>
+    <p>One step away from the real world.</p>
+    <p>Testing, reviewing, and pretending to be production.</p>
+    <p>Close enough to prod to matter. Far enough to break things safely.</p>
+    <div class="badge">ENV: STAGING</div>
+  </div>
+</body>
+</html>
