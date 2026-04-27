@@ -13,9 +13,7 @@ Terraform handles the **infrastructure provisioning**, while Ansible automates *
 - Creates a **security group** with rules for SSH (22) and HTTP (80).
 - Uses **Ansible** to configure web servers on each instance.
 - Deploys environment-specific `index.html` pages:
-  - `dev` → Minimal UI with a developer theme.
-  - `stage` → Modern preview UI.
-  - `prod` → Portfolio UI with achievements, skills, certifications, socials, and image.
+ 
 
 ### Why it’s awesome:
 - Full Infrastructure as Code (IaC) workflow.
@@ -32,15 +30,13 @@ Terraform handles the **infrastructure provisioning**, while Ansible automates *
 terra-ansible-starter/
 ├── terra-config/
 │   ├── main.tf
-│   ├── outputs.tf
-|   |-- output.json 
+│   ├── outputs.tf 
 │   ├── variables.tf
 │   └── provider.tf
 │
 ├── ansible/
 │   ├── ansible.cfg
 │   ├── inventory/
-│   │   └── hosts.ini
 │   ├── playbook.yml
 │   └── roles/
 │       └── webserver/
@@ -67,8 +63,8 @@ terra-ansible-starter/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/Pravesh-Sudha/terra-projects.git
-cd terra-projects/terra-ansible-starter
+git clone https://github.com/chamikaNimnajith/Terraform-Ansible.git
+cd Terraform-Ansible/terra-ansible-starter
 ```
 
 ### 2. Create SSH key for EC2 access
@@ -145,39 +141,4 @@ This script:
 
 ---
 
-## 🌐 Environments Overview
 
-| Environment | Instances | Description                                           |
-| ----------- | --------- | ----------------------------------------------------- |
-| `dev`       | 2         | Lightweight static pages for development              |
-| `stage`     | 2         | Preview deployment before production                  |
-| `prod`      | 2         | Final portfolio version with achievements and socials |
-
----
-
-## 👨‍💻 Author
-
-**Pravesh Sudha**
-DevOps Engineer • Cloud Enthusiast • Content Creator
-
-🌐 [Website](https://praveshsudha.com)
-🐦 [Twitter](https://x.com/praveshstwt)
-💼 [LinkedIn](https://www.linkedin.com/in/pravesh-sudha/)
-📺 [YouTube](https://www.youtube.com/@pravesh-sudha)
-🧠 [Hashnode Blog](https://blog.praveshsudha.com)
-
----
-
-## ⭐️ Support
-
-If you found this project helpful:
-
-* Give the repo a ⭐️ on [GitHub](https://github.com/Pravesh-Sudha/terra-projects)
-* Share it with your DevOps friends!
-* Follow me for more DevOps projects and blogs 🚀
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License — see the LICENSE file for details.
