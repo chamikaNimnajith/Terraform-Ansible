@@ -75,44 +75,6 @@ This project uses an SSH key named **appKey** to access your instances.
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/appKey
 ```
 
-> Make sure to update your Terraform configuration to use this key.
-
-### 3. Initialize Terraform
-
-```bash
-cd terraform
-terraform init
-```
-
-### 4. Apply Terraform configuration
-
-```bash
-terraform apply -auto-approve
-terraform output -json instance_public_ips > output.json 
-```
-
-This will:
-
-* Create your EC2 instances.
-* Generate a `inventory.json` file with their public IPs.
-
-### 5. Generate Ansible inventory
-
-```bash
-python3 scripts/generate_inventory.py
-```
-
-This script converts the Terraform output JSON into a valid Ansible inventory file under `ansible/inventory/hosts.ini`.
-
-### 6. Run Ansible playbook
-
-```bash
-ansible-playbook -i ansible/inventory/hosts.ini ansible/playbook.yml
-```
-
-This will install and configure Nginx, and deploy the corresponding `index.html` page for each environment.
-
----
 
 ## 🧩 One-Click Deployment
 
